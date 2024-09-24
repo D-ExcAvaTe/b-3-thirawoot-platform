@@ -4,14 +4,17 @@ using UnityEngine;
 
 internal class Player : Character
 {
+    private void Start()
+    {
+    }
     public override bool IsDead()
     {
         return base.IsDead();
     }
 
-    public override void TakeDamage(int _damage)
+    public override void TakeDamage(int damageHit)
     {
-        base.TakeDamage(_damage);
+        base.TakeDamage(damageHit);
     }
     private void Behavior()
     {
@@ -21,7 +24,7 @@ internal class Player : Character
     {
 
     }
-    private void OnHitWithEnemy()
+    private void OnHitWithEnemy(Enemy enemy)
     {
 
     }

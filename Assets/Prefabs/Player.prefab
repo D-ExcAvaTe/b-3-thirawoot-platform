@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 11440140}
   - component: {fileID: 6128888}
   - component: {fileID: 5823704}
+  - component: {fileID: 379404657710376679}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -218,7 +219,7 @@ MonoBehaviour:
   groundCheck: {fileID: 467490}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   jumpForce: 700
 --- !u!61 &6128888
 BoxCollider2D:
@@ -300,3 +301,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.38}
   serializedVersion: 2
   m_Radius: 0.28
+--- !u!114 &379404657710376679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d45ab403db37904dad21cab3a0a89c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  r2d: {fileID: 0}

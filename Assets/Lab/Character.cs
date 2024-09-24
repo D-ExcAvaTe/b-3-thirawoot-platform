@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract class Character : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
     private int health;
     public int Health
@@ -12,7 +12,7 @@ abstract class Character : MonoBehaviour
     }
 
     public Animator anim;
-    public Rigidbody2D r2d;
+    public Rigidbody2D rb2D;
 
     public virtual bool IsDead()
     {

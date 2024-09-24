@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-internal class Crocodile : Enemy
+internal class Crocodile : Enemy //inherit จาก Enemy 
 {
     [SerializeField] private float attackRange;
     [SerializeField] private Player player;
 
-    public override void Behavior()
+    public override void Behavior() //override Behavior
     {
-        base.Behavior();
+        Debug.Log("<color=#B4FF94>Crocodile</color>");
     }
 
     public override bool IsDead()
@@ -17,9 +17,9 @@ internal class Crocodile : Enemy
         return base.IsDead();
     }
 
-    public override void TakeDamage(int _damage)
+    public override void TakeDamage(int damageHit)
     {
-        base.TakeDamage(_damage);
+        base.TakeDamage(damageHit);
     }
 
 }

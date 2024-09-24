@@ -438,6 +438,30 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8265940440030968382, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 657515982}
+    - target: {fileID: 8265940440030968382, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: rb2D
+      value: 
+      objectReference: {fileID: 657515983}
+    - target: {fileID: 8265940440030968382, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: velocity.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265940440030968382, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: movePoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265940440030968382, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: movePoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 950781442}
+    - target: {fileID: 8265940440030968382, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+      propertyPath: movePoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 2104364834}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -939,6 +963,16 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 473078, guid: 988fc297a71d24254ba0a364fda65476, type: 3}
   m_PrefabInstance: {fileID: 528135623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &657515982 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9576784, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+  m_PrefabInstance: {fileID: 341433136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &657515983 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5099268, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
+  m_PrefabInstance: {fileID: 341433136}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &700832717
 GameObject:
@@ -2623,7 +2657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11440140, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
       propertyPath: whatIsGround.m_Bits
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
