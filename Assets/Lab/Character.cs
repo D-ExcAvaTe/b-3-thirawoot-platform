@@ -24,4 +24,8 @@ public abstract class Character : MonoBehaviour
     {
         Health -= _damage;
     }
+    public void Init(int _health)
+    {
+        Health = _health;
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : Character
 {
-    private int damageHit; //"Tour pair"
+    [SerializeField] private int damageHit; //"Tour pair"
     public int DamageHit //properties to get/set with "Tour pair"
     {
         get { return damageHit; }

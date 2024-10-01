@@ -6,6 +6,7 @@ internal class Player : Character
 {
     private void Start()
     {
+        Init(120);
     }
     public override bool IsDead()
     {
