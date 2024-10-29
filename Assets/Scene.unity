@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1103,6 +1102,37 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 9576784, guid: 3eeab7ca4bdca4ba382826bdc99b4911, type: 3}
   m_PrefabInstance: {fileID: 341433136}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &693864776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693864777}
+  m_Layer: 8
+  m_Name: AttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &693864777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693864776}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1842384715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &700832717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,7 +1840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  owner: 
   rb2d: {fileID: 1091987800}
   force: {x: 0, y: 0}
 --- !u!1001 &1097066490
@@ -3021,6 +3050,22 @@ PrefabInstance:
       propertyPath: attackPosition
       value: 
       objectReference: {fileID: 488358333}
+    - target: {fileID: 5419336465289336292, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: <Bullet>k__BackingField
+      value: 
+      objectReference: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
+    - target: {fileID: 5419336465289336292, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: <AttackDelay>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419336465289336292, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: <AttackRange>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419336465289336292, guid: c07db661138134f589f46b8510d57c9a, type: 3}
+      propertyPath: <AttackTimer>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 198326, guid: c07db661138134f589f46b8510d57c9a, type: 3}
@@ -3159,10 +3204,25 @@ PrefabInstance:
       propertyPath: whatIsGround.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 379404657710376679, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: attackPosition
+      value: 
+      objectReference: {fileID: 693864777}
+    - target: {fileID: 379404657710376679, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: <Bullet>k__BackingField
+      value: 
+      objectReference: {fileID: 182108, guid: a5638a192258f4059b0e074542d33fbc, type: 3}
+    - target: {fileID: 379404657710376679, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      propertyPath: <AttackDelay>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 124882, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 485146, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 693864777}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
 --- !u!4 &1838506212 stripped
@@ -3186,6 +3246,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d45ab403db37904dad21cab3a0a89c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1842384715 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 485146, guid: 6dde6029886a24408b05eced6b5964a6, type: 3}
+  m_PrefabInstance: {fileID: 1827418540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1851974426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 407626, guid: efff92728486e44de9714de91b3abbd2, type: 3}

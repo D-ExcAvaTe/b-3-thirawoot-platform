@@ -1,14 +1,23 @@
+using System.Collections;
 using UnityEngine;
 
 public class Banana : Weapon
 {
-    [SerializeField] private float speed;
-
-    protected override void Start()
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Vector2 velocity;
+    [SerializeField] private float destroyDelay = 3f;
+    private void Start()
     {
-        Damage = 30;
-        speed = 4;
-        base.Start();
+        StartCoroutine(DestroyDelay());
+    }
+    private void Update()
+    {
+        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+    }
+
+    private IEnumerator DestroyDelay()
+    {
+        yield return new WaitForSeconds(destroyDelay);
     }
 
     public override void OnHitWIthCharacter(Character character)
@@ -17,6 +26,5 @@ public class Banana : Weapon
 
     public override void Move()
     {
-        Debug.Log($"Banana is moving with Transform ด้วยความเร็วคงที่ (speed:{speed})");
     }
 }
