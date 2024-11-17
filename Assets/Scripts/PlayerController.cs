@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce = 700.0f;
 
-	// Use this for initialization
 	void Start () {
 		r2d = GetComponent<Rigidbody2D>	();
 		anim = GetComponent<Animator>();
@@ -52,9 +51,5 @@ public class PlayerController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-	}
-	void Flip(int _flipAmount)
-	{
-
 	}
 }

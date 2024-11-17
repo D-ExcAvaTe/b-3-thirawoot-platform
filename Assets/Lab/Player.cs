@@ -25,7 +25,11 @@ internal class Player : Character,IShootable
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Instantiate(Bullet, attackPosition.position, Quaternion.identity);
+                GameObject bullet = Instantiate(Bullet, attackPosition.position, Quaternion.identity);
+                Weapon weapon = bullet.GetComponent<Weapon>();
+
+                if (weapon != null) weapon.Init(Damage, this);
+                
                 AttackTimer = 0;
             }
         }

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-internal class Crocodile : Enemy, IShootable //inherit ¨Ò¡ Enemy 
+internal class Crocodile : Enemy, IShootable //inherit ï¿½Ò¡ Enemy 
 {
     [field: SerializeField] public GameObject Bullet { get; set; }
 
@@ -24,6 +25,10 @@ internal class Crocodile : Enemy, IShootable //inherit ¨Ò¡ Enemy
         if (distance <= AttackRange) Shoot();
     }
 
+    void Start()
+    {
+        Init(50);
+    }
     private void Update()
     {
         AttackTimer -= Time.deltaTime;

@@ -16,6 +16,12 @@ public class Rock : Weapon
 
     public override void OnHitWIthCharacter(Character character)
     {
+        Player player = character.GetComponent<Player>();
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+            Destroy(this.gameObject);
+        }
     }
 
     public override void Move()
