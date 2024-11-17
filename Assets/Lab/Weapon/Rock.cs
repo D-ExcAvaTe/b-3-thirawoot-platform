@@ -12,6 +12,8 @@ public class Rock : Weapon
     {
         Damage = 40;
         base.Start();
+
+        rb2d.AddForce(force);
     }
 
     public override void OnHitWIthCharacter(Character character)

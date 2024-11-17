@@ -9,7 +9,7 @@ internal class Ant : Enemy
 
     private void Start()
     {
-        Init(30);
+        Init(30, 10);
         Debug.Log($"ant health = {Health}");
     }
 

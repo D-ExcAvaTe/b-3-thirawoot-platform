@@ -31,11 +31,16 @@ public abstract class Character : MonoBehaviour
     public virtual void TakeDamage(int _damage)
     {
         Health -= _damage;
-        healthBar.UpdateHealthBar(_damage);
+        healthBar.UpdateHealthBar(Health);
+        
+        if(IsDead()) Destroy(this.gameObject);
+        
+        Debug.Log($"{name} took {_damage} damage Hp:{Health}");
     }
-    public void Init(int _health)
+    public void Init(int _health, int _damage)
     {
         Health = _health;
-        healthBar.Initialize(_health);
+        Damage = _damage;
+        healthBar.Initialize(Health);
     }
 }

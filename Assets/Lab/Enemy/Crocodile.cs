@@ -27,7 +27,7 @@ internal class Crocodile : Enemy, IShootable //inherit �ҡ Enemy
 
     void Start()
     {
-        Init(50);
+        Init(50, 10);
     }
     private void Update()
     {
@@ -48,11 +48,6 @@ internal class Crocodile : Enemy, IShootable //inherit �ҡ Enemy
     public override bool IsDead()
     {
         return base.IsDead();
-    }
-
-    public override void TakeDamage(int damageHit)
-    {
-        base.TakeDamage(damageHit);
     }
 
     void IShootable.Shoot()

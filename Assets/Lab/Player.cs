@@ -12,7 +12,7 @@ internal class Player : Character,IShootable
     [SerializeField] private Transform attackPosition;
     private void Start()
     {
-        Init(120);
+        Init(120, 15);
     }
     private void Update()
     {
@@ -54,10 +54,6 @@ internal class Player : Character,IShootable
         return base.IsDead();
     }
 
-    public override void TakeDamage(int damageHit)
-    {
-        base.TakeDamage(damageHit);
-    }
     private void Behavior()
     {
 
